@@ -1,7 +1,41 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class JuegoDeDados {
     public static void main(String[] args) {
 
-        Dado dado = new Dado();
+        Scanner sn = new Scanner(System.in);
+        boolean salir = false;
+        int opcion; //Opcion del usuario
+        while (!salir) {
+            System.out.println("[ Proyecto N°1 --------------------------------------- ]");
+            System.out.println("[ Proyecto de Herencia y Polimorfismo - Juego de Dados ]\n");
+            System.out.println("[1] Agregar jugador");
+            System.out.println("[2] Lista de jugadores");
+            System.out.println("[3] Partida");
+            System.out.println("[4] Salir");
+            System.out.print(" -  Escribe una de las opciones: ");
+            opcion = sn.nextInt();
+
+            switch (opcion) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+                    salir = true;
+                    break;
+                default:
+                    System.out.println(" -- Solo números entre 1 y 4 --\n\n");
+            }
+        }
+
+        /*Dado dado = new Dado();
 
         System.out.println("[ Proyecto N°1 --------------------------------------- ]");
         System.out.println("[ Proyecto de Herencia y Polimorfismo - Juego de Dados ]\n");
@@ -32,6 +66,6 @@ public class JuegoDeDados {
             System.out.println("\nGanador: Jugador 1");
         }else{
             System.out.println("\nGanador: Jugador 2");
-        }
+        }*/
     }
 }
