@@ -1,44 +1,49 @@
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JuegoDeDados {
 
-    public static ArrayList<Jugador> Registry_Player = new ArrayList<>();
+    public static ArrayList<Jugador> Lista_Jugadores = new ArrayList<>();
 
     public static void main(String[] args) {
 
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Opcion del usuario
-        String username;
 
         while (!salir) {
-            System.out.println("[ Proyecto N°1 --------------------------------------- ]");
+            System.out.println("\n[ Proyecto N°1 --------------------------------------- ]");
             System.out.println("[ Proyecto de Herencia y Polimorfismo - Juego de Dados ]\n");
             System.out.println("[1] Registrar jugador");
             System.out.println("[2] Lista de jugadores");
             System.out.println("[3] Partida");
             System.out.println("[4] Salir");
             System.out.print(" -  Escribe una de las opciones: ");
-            opcion = sn.nextInt();
+            opcion = sn.nextInt(); sn.nextLine();
 
             switch (opcion) {
                 case 1:
+                    String username;
                     System.out.println("\n[ -  Resgistro de Usuario  ----------------------- ]");
                     System.out.println("Registro de usuario");
                     System.out.print("[ ] username: "); username = sn.nextLine();
                     Jugador jugador = new Jugador(username);
+                    Lista_Jugadores.add(jugador);
                     break;
                 case 2:
                     System.out.println("\n[ -  Usuarios Registrados  ----------------------- ]");
-                    System.out.println("Usuarios Registrados");
-                    for(int i = 0; i < Registry_Player.size(); i++) {
-                        System.out.println(Registry_Player.get(i).toString());
+                    System.out.println("[ ] Usuarios Registrados");
+                    for(int i = 0; i < Lista_Jugadores.size(); i++) {
+                        System.out.println(Lista_Jugadores.get(i).toString());
                     }
                     break;
                 case 3:
-                    System.out.println("Usuarios Registrados");
+                    for(int i=0; i < Lista_Jugadores.size(); i++){
+                        Jugador dado = new Dado(Lista_Jugadores.get(i).getUsername());
+                    }
+                    for(int i=0; i < Lista_Jugadores.size(); i++){
+                        //System.out.println(Lista_Tiros.get(i).toString());
+                    }
                     break;
                 case 4:
                     salir = true;
@@ -81,4 +86,5 @@ public class JuegoDeDados {
             System.out.println("\nGanador: Jugador 2");
         }*/
     }
+
 }

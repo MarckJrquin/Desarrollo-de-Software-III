@@ -1,4 +1,5 @@
 public class Jugador {
+
     private String username;
 
     public Jugador(String username){
