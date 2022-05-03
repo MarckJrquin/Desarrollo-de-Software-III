@@ -3,7 +3,7 @@ public class SinAzucar {
     protected double ganancias;
 
     SinAzucar(){
-        vasos=100;
+        vasos=1;
     }
 
     public int mostrarVasos(){
