@@ -7,11 +7,7 @@ public class Jugador {
     }
 
     public String getUsername() {
-        return username;
-    }
-
-    public String toString(){
-        return "Usuario: "+getUsername();
+        return " -  Usuario: "+username;
     }
 
 }

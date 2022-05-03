@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class JuegoDeDados {
 
-    public static ArrayList<Jugador> Lista_Jugadores = new ArrayList<>();
+    public static ArrayList<Dado> Lista_Jugadores = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -27,23 +29,34 @@ public class JuegoDeDados {
                     System.out.println("\n[ -  Resgistro de Usuario  ----------------------- ]");
                     System.out.println("Registro de usuario");
                     System.out.print("[ ] username: "); username = sn.nextLine();
-                    Jugador jugador = new Jugador(username);
+                    Dado jugador = new Dado(username);
                     Lista_Jugadores.add(jugador);
                     break;
                 case 2:
                     System.out.println("\n[ -  Usuarios Registrados  ----------------------- ]");
                     System.out.println("[ ] Usuarios Registrados");
                     for(int i = 0; i < Lista_Jugadores.size(); i++) {
-                        System.out.println(Lista_Jugadores.get(i).toString());
+                        System.out.println(Lista_Jugadores.get(i).getUsername());
                     }
                     break;
                 case 3:
-                    for(int i=0; i < Lista_Jugadores.size(); i++){
-                        Jugador dado = new Dado(Lista_Jugadores.get(i).getUsername());
+                    int rondas;
+                    System.out.println("\n[ -  Partida de Juego  --------------------------- ]");
+                    System.out.print("[ ] Ingrese la cantidad de rondas: "); rondas = sn.nextInt();
+
+                    for (int i=0; i<rondas; i++){
+                        System.out.println("[ ] Ronda N°"+(i+1));
+                        for(int j=0; j < Lista_Jugadores.size(); j++){
+                            System.out.println(" -  Usuario: "+Lista_Jugadores.get(j).getUsername()+" puntos: "+Lista_Jugadores.get(j).tirarDado());
+                        }
                     }
-                    for(int i=0; i < Lista_Jugadores.size(); i++){
-                        //System.out.println(Lista_Tiros.get(i).toString());
+
+                    Collections.sort(Lista_Jugadores);
+                    System.out.println("\n[ ] Ranking de Puntos");
+                    for(Dado aux: Lista_Jugadores){
+                        System.out.println(aux);
                     }
+
                     break;
                 case 4:
                     salir = true;
@@ -52,39 +65,5 @@ public class JuegoDeDados {
                     System.out.println(" -- Solo números entre 1 y 4 --\n\n");
             }
         }
-
-        /*Dado dado = new Dado();
-
-        System.out.println("[ Proyecto N°1 --------------------------------------- ]");
-        System.out.println("[ Proyecto de Herencia y Polimorfismo - Juego de Dados ]\n");
-
-        int puntosJ1=0;
-        int puntosJ2=0;
-        int aux1=0;
-        int aux2=0;
-
-        for(int i = 0; i < (2*2); i++){
-            if(i%2==0){
-                aux1=puntosJ1;
-                puntosJ1 += dado.tirarDado();
-                System.out.println("[ ] Lazamiento del jugador 1: "+(puntosJ1-aux1));
-            }else{
-                aux2=puntosJ2;
-                puntosJ2 += dado.tirarDado();
-                System.out.println("[ ] Lazamiento del jugador 2: "+(puntosJ2-aux2));
-            }
-        }
-
-        System.out.println("\n - Puntos de Jugador 1: "+puntosJ1);
-        System.out.println(" - Puntos de Jugador 2: "+puntosJ2);
-
-        if(puntosJ1 == puntosJ2){
-            System.out.println("\nEmpate!");
-        }else if(puntosJ1 > puntosJ2){
-            System.out.println("\nGanador: Jugador 1");
-        }else{
-            System.out.println("\nGanador: Jugador 2");
-        }*/
     }
-
 }
