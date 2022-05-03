@@ -1,8 +1,7 @@
 public class ConAzucar extends SinAzucar{
-    private int cucharadas;
+    protected int cucharadas, vasos_cav=0;
 
     ConAzucar(){
-        super();
         cucharadas=80;
     }
 
@@ -14,9 +13,16 @@ public class ConAzucar extends SinAzucar{
         return 80-cucharadas;
     }
 
-    public double calcularPrecio(int ventaVasos, int cucharadas){
-        return ventaVasos*0.5*cucharadas;
+    public int total_Vasos_ConAzucar_vendidos(){
+        return vasos_cav;
     }
 
+    public double calcularPrecio(int ventaVasos, int ventaCucharadas){
+        ganancias = ganancias + (ventaVasos*0.50);
+        vasos = vasos - ventaVasos;
+        vasos_cav = vasos_cav + ventaVasos;
+        cucharadas = cucharadas - (ventaVasos*ventaCucharadas);
+        return ventaVasos*0.5;
+    }
 
 }
