@@ -18,6 +18,10 @@ public class SinAzucar {
         return vasos_sav;
     }
 
+    public double ganancias_totales(){
+        return ganancias;
+    }
+
     public double calcularPrecio(int ventaVasos){
         ganancias = ganancias + (ventaVasos*0.45);
         vasos = vasos - ventaVasos;

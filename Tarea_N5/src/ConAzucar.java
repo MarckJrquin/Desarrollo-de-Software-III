@@ -17,6 +17,10 @@ public class ConAzucar extends SinAzucar{
         return vasos_cav;
     }
 
+    public double ganancias_totales(){
+        return ganancias;
+    }
+
     public double calcularPrecio(int ventaVasos, int ventaCucharadas){
         ganancias = ganancias + (ventaVasos*0.50);
         vasos = vasos - ventaVasos;

@@ -103,7 +103,7 @@ public class LaLimonada {
                         System.out.println("    [ ] Cantidad de limonadas sin azucar vendidas: " + venta.total_Vasos_SinAzucar_vendidos());
                         System.out.println("    [ ] Cantidad de limonadas con azucar vendidas: " + venta.total_Vasos_ConAzucar_vendidos());
                         System.out.println("[ ] Cantidad de cucharadas de azucar usadas: " + venta.total_cucharadas_utilizados());
-                        System.out.println("\n[ ] Ingresos Totales: ");
+                        System.out.println("\n[ ] Ingresos Totales: " + venta.ganancias_totales());
                         break;
                     case 3:
                         salir = true;
