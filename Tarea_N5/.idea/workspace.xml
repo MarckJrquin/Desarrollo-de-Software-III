@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d0882fd-3460-4b19-8d5b-09cfa4aeede3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../P1T/P1T.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ParcialN1/ParcialN1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/Ejemplo_1-Desarrollo_de_Software_III.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/Ejemplo_1-Desarrollo_de_Software_III.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/out/production/Ejemplo_1-Desarrollo_de_Software_III/A.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/out/production/Ejemplo_1-Desarrollo_de_Software_III/B.class" beforeDir="false" />
@@ -29,6 +27,12 @@
       <change beforePath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/out/production/Ejemplo_1-Desarrollo_de_Software_III/Test2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/out/production/Ejemplo_1-Desarrollo_de_Software_III/Triplicar.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ejemplos de Herencia y Polimorfismo/Ejemplo_1-Desarrollo_de_Software_III/out/production/Ejemplo_1-Desarrollo_de_Software_III/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParcialN1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ParcialN1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParcialN1/src/Edificio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ParcialN1/src/Edificio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParcialN1/src/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ParcialN1/src/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParcialN1/src/ParcialN1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ParcialN1/src/ParcialN1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParcialN1/src/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ParcialN1/src/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,19 +61,6 @@
     <configuration name="LaLimonada" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LaLimonada" />
       <module name="Tarea_N5" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Tarea_N5" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Tarea_N5" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

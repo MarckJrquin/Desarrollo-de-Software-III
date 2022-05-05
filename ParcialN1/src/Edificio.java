@@ -1,3 +1,3 @@
 public class Edificio {
-    boolean ascenson;
+    boolean ascensor=false;
 }
