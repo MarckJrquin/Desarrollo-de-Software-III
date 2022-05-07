@@ -1,6 +1,6 @@
 public class Restaurante extends Edificio{
     int sillas, sillasAlquiladas;
-    double ganancias;
+    double ganancias, itbms;
 
     Restaurante(){
         super();
@@ -19,12 +19,25 @@ public class Restaurante extends Edificio{
         return sillasAlquiladas;
     }
 
+    public boolean restauranteAscensor(boolean ascensor){
+        this.ascensor = ascensor;
+        return this.ascensor;
+    }
 
-    public double calcularPrecio(int sillas){
-        ganancias = ganancias + (sillas*2.5);
-        this.sillas = this.sillas - sillas;
-        sillasAlquiladas = sillasAlquiladas + sillas;
-        return sillas*2.5;
+    public double calcularPrecio(int silla){
+        ganancias = ganancias + (silla*2.5);
+        sillas = sillas - silla;
+        sillasAlquiladas = sillasAlquiladas + silla;
+        return silla*2.5;
+    }
+
+    public double calcularPrecio(int silla, double itbms){
+        this.itbms = (silla*2.5)*0.07;
+        return this.itbms;
+    }
+
+    public double ganancias_totales(){
+        return ganancias;
     }
 
 }

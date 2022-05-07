@@ -1,3 +1,8 @@
 public class Edificio {
-    boolean ascensor=false;
+    boolean ascensor;
+
+    Edificio(){
+        this.ascensor=false;
+    }
+
 }
