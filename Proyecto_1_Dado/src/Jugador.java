@@ -7,7 +7,6 @@ public class Jugador {
     }
 
     public String getUsername() {
-        return " -  Usuario: "+username;
+        return username;
     }
-
 }
