@@ -1,5 +1,5 @@
 public class Hotel extends Edificio{
-    int habitaciones, habitacionesAlquiladas=0;
+    int habitaciones, habitacionesAlquiladas;
     double ganancias, itbms;
 
     Hotel(){
@@ -7,25 +7,17 @@ public class Hotel extends Edificio{
         habitaciones=100;
     }
 
+    public boolean hotelAscensor(boolean ascensor){
+        this.ascensor = ascensor;
+        return this.ascensor;
+    }
+
     public int mostrarHabitaciones(){
         return habitaciones;
     }
 
-    public int totalHabitacionesUtilizados(){
-        return 100-habitaciones;
-    }
-
     public int totalHabitacionesAlquiladas(){
         return habitacionesAlquiladas;
-    }
-
-    public double ingresosTotales(){
-        return ganancias;
-    }
-
-    public boolean hotelAscensor(boolean ascensor){
-        this.ascensor = ascensor;
-        return this.ascensor;
     }
 
     public double calcularPrecio(int habitaciones){
@@ -36,12 +28,12 @@ public class Hotel extends Edificio{
     }
 
     public double calcularPrecio(int habitaciones, double itbms){
-        this.itbms = (habitaciones*150)*0.07;
+        this.itbms = (habitaciones*150)*itbms;
         return this.itbms;
     }
 
-    public double ganancias_totales(){
-        return ganancias;
+    public double ingresosTotales(){
+        return ganancias+itbms;
     }
 
 }

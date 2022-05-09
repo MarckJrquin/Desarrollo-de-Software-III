@@ -1,5 +1,5 @@
 public class Restaurante extends Edificio{
-    int sillas, sillasAlquiladas;
+    int mesas, sillas, sillasAlquiladas;
     double ganancias, itbms;
 
     Restaurante(){
@@ -7,21 +7,17 @@ public class Restaurante extends Edificio{
         sillas = 30;
     }
 
+    public boolean restauranteAscensor(boolean ascensor){
+        this.ascensor = ascensor;
+        return this.ascensor;
+    }
+
     public int mostrarSillas(){
         return sillas;
     }
 
-    public int totalSillasUtilizados(){
-        return 80-sillas;
-    }
-
     public int totalSillasAlquiladas(){
         return sillasAlquiladas;
-    }
-
-    public boolean restauranteAscensor(boolean ascensor){
-        this.ascensor = ascensor;
-        return this.ascensor;
     }
 
     public double calcularPrecio(int silla){
@@ -32,12 +28,12 @@ public class Restaurante extends Edificio{
     }
 
     public double calcularPrecio(int silla, double itbms){
-        this.itbms = (silla*2.5)*0.07;
+        this.itbms = (silla*2.5)*itbms;
         return this.itbms;
     }
 
-    public double ganancias_totales(){
-        return ganancias;
+    public double ingresosTotales(){
+        return ganancias+itbms;
     }
 
 }
