@@ -10,13 +10,25 @@ public class Dado extends Jugador implements Comparable<Dado>{
     }
 
     public int tirarDado(){
-        puntos = this.generaNumeroAleatorio(1, numeroCara);
-        this.puntostot = puntostot + puntos;
+        puntos = generaNumeroAleatorio(1, numeroCara);
+        puntostot = puntostot + puntos;
+        return puntos;
+    }
+
+    public int tirarDado(int numeroCara){
+        puntos = generaNumeroAleatorio(1, numeroCara);
+        puntostot = puntostot + puntos;
         return puntos;
     }
 
     public int puntosTotales(){
         return puntostot;
+    }
+
+    public void reseteoPuntosTotales(boolean reset){
+        if(reset){
+            puntostot=0;
+        }
     }
 
     private int generaNumeroAleatorio(int minimo,int maximo){
